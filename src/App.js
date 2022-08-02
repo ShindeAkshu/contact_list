@@ -37,6 +37,12 @@ const App = ()=> {
       name="Jhon ken" 
       email="zxcvl@gmail.com"
        age={22}/>
+        <Contactcard 
+      avtarUrl= "https://via.placeholder.com/150"
+      name="Jhon ken" 
+      email="zxcvl@gmail.com"
+       age={22}/>
+
     </div>
     
   ) 
