@@ -14,6 +14,7 @@ const App = ()=> {
     email:"fdghjkl@gmail.com",
     age: 25
     },
+    
     {avtarUrl:"https://via.placeholder.com/150",
     name:"Manish Pol",
     email:"fdghjkl@gmail.com",
@@ -38,11 +39,22 @@ const App = ()=> {
       email="zxcvl@gmail.com"
        age={22}/>
         <Contactcard 
-      avtarUrl= "https://via.placeholder.com/150"
-      name="Jhon ken" 
-      email="zxcvl@gmail.com"
+       avtarUrl= "https://via.placeholder.com/150"
+       name="Jhon ken" 
+       email="zxcvl@gmail.com"
        age={22}/>
 
+       <Contactcard 
+       avtarUrl= "https://via.placeholder.com/150"
+       name="Jhon ken" 
+       email="zxcvl@gmail.com"
+       age={22}/>
+     
+      <Contactcard 
+       avtarUrl= "https://via.placeholder.com/150"
+       name="Jhon ken" 
+       email="zxcvl@gmail.com"
+       age={22}/>
     </div>
     
   ) 
