@@ -26,17 +26,13 @@ const App = ()=> {
       {contacts.map((contact,index)=>{
         return(
         <Contactcard 
-        avtarUrl= "https://via.placeholder.com/150"
-        name="akshata shinde" 
-        email="fdghjkl@gmail.com"
-        age={19}/>
+        avtarUrl= {contact.avtarUrl}
+        name={contact.name}
+        email={contact.email}
+        age={contact.age}/>
         )
       })}
      
-        
-
-       
-
     </div>
     
   ) 
