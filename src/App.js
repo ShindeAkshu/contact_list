@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.css';
 import Contactcard from './ContactCard';
-import { useState } from 'react';
+import { useState} from 'react';
+import { useEffect } from 'react';
 
 const App = ()=> {
   /* const contacts = [
@@ -23,20 +24,26 @@ const App = ()=> {
     }
    ];*/
    
-   const [contacts , setContacts] = useState([]);
-   fetch("https://randomuser.me/api/?results=5")
+   const [results , setResults] = useState([]);
+
+   useEffect(() =>{
+    fetch("https://randomuser.me/api/?results=5")
    .then(response => response.json()) 
-   .then(data => console.log(data));
+   .then(data => {
+    console.log(data)
+    setResults(data.results);
+   });
+  },[])
 
   return(
     <div>
-      {contacts.map((contact,index)=>{
+      {results.map((result,index)=>{
         return(
         <Contactcard key={index}
-        avtarUrl= {contact.avtarUrl}
-        name={contact.name}
-        email={contact.email}
-        age={contact.age}/>
+        avtarUrl= {result.picture.large}
+        name={result.first}
+        email={result.email}
+        age={result.dob.age}/>
         )
       })}
      
